@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=Z, initial-scale=1.0">
+    <title>Aula 5</title>
+</head>
+<body>
+    <h1>4 FERRAMENTAS TI ULTILIZADAS NA BIBLIOTECA ANA BOVE</h1>
+    <br>
+    <h2>4.1 Sobre a Biblioteca Ana Bove e sua instituição mantedora</h2>
+    <br>
+    <h3>4.1.1 O Imp</h3>
+    <br>
+    <h4>4.1.2 A Biblioteca Ana Bove</h4>
+    <br>
+    <h5>4.2 Diagnóstico</h5>
+    <br>
+    <br>
+    <hr>
+    <h1>Principais formatações</h1>
+    <h2>Negrito/Destaque</h2>
+    <p> Nesta frase temos uma <B>parte do texto em negrito</B> usando a tag B (não semântica)</p>
+    <p> Na frase temos uma <strong>parte do texto em negrito</strong> usando a tag strong (com semântica)</p>
+    <h2>Itálico/Ênfase</h2>
+    <p>Nesta frase temos uma palavra em <i>itálico</i> usando a tag i (não semântica)</p>
+    <p>Nesta frase temos uma palavra em <EM>itálico</EM> Usando a tag EM (com semântica)</p>
+    <h2>Texto Marcador</h2>
+    <p>Aqui vamos usar um texto com destaque <mark>de marcador de texto</mark> usando mark</p>
+    <p>Aqui vamos usar um texto com destaque <mark>de marcador de texto</mark> usando mark</p>
+    <h2>Texto grande e pequeno</h2>
+    <p>Estamos trabalhando aqui com um <big>texto grande</big> e um <small>texto pequeno</small> nesta frase</p>
+    <h2>Texto deletado</h2>
+    <p>Neste paragráfo vamos trabalhar com um texto <del>que foi excluído</del> da frase (forma semântica)</p>
+    <h2>Texto inserido</h2>
+    <p>Nesta frase vamos demonstrar como <u>destacar um texto</u> na frase de forma semântica</p>
+    <p>Nesta frase vamos demonstrar como <insert>destacar um texto</insert> na frase de forma não semântica</p>
+    <h2>Texto sobescrito</h2>
+    <p>Vamos demonstrar uma fórmula da equação do segundo grau ax<sup>2</sup>+bx+c=0</p>
+    <h2>Texto subescrito</h2>
+    <p>Vamos demonstrar o texto subescrito com a fórmula da água H<sub>2</sub>O</p>
+    <h2>Trecho de código fonte</h2>
+    <p>Neste exemplo vou demonstrar um trecho de código de calculadora em linguagem C</p>
+    <pre>
+        <code>#include <stdio.h>
+
+            // Função para somar dois números
+            float somar(float a, float b) {
+                return a + b;
+            }
+            
+            // Função para subtrair dois números
+            float subtrair(float a, float b) {
+                return a - b;
+            }
+            
+            // Função para multiplicar dois números
+            float multiplicar(float a, float b) {
+                return a * b;
+            }
+            
+            // Função para dividir dois números
+            float dividir(float a, float b) {
+                if (b != 0) {
+                    return a / b;
+                } else {
+                    printf("Erro! Divisão por zero.\n");
+                    return 0;
+                }
+            }
+            
+            // Função para exibir o menu
+            void exibirMenu() {
+                printf("\nCalculadora Simples\n");
+                printf("Selecione uma operação:\n");
+                printf("1. Soma\n");
+                printf("2. Subtração\n");
+                printf("3. Multiplicação\n");
+                printf("4. Divisão\n");
+                printf("5. Sair\n");
+                printf("Digite sua escolha: ");
+            }
+            
+            int main() {
+                float num1, num2, resultado;
+                int opcao;
+            
+                do {
+                    exibirMenu();
+                    scanf("%d", &opcao);
+            
+                    switch (opcao) {
+                        case 1:
+                            printf("Digite o primeiro número: ");
+                            scanf("%f", &num1);
+                            printf("Digite o segundo número: ");
+                            scanf("%f", &num2);
+                            resultado = somar(num1, num2);
+                            printf("Resultado: %.2f\n", resultado);
+                            break;
+                        case 2:
+                            printf("Digite o primeiro número: ");
+                            scanf("%f", &num1);
+                            printf("Digite o segundo número: ");
+                            scanf("%f", &num2);
+                            resultado = subtrair(num1, num2);
+                            printf("Resultado: %.2f\n", resultado);
+                            break;
+                        case 3:
+                            printf("Digite o primeiro número: ");
+                            scanf("%f", &num1);
+                            printf("Digite o segundo número: ");
+                            scanf("%f", &num2);
+                            resultado = multiplicar(num1, num2);
+                            printf("Resultado: %.2f\n", resultado);
+                            break;
+                        case 4:
+                            printf("Digite o primeiro número: ");
+                            scanf("%f", &num1);
+                            printf("Digite o segundo número: ");
+                            scanf("%f", &num2);
+                            resultado = dividir(num1, num2);
+                            if (num2 != 0) {
+                                printf("Resultado: %.2f\n", resultado);
+                            }
+                            break;
+                        case 5:
+                            printf("Saindo da calculadora...\n");
+                            break;
+                        default:
+                            printf("Opção inválida! Tente novamente.\n");
+                    }
+                } while (opcao != 5);
+            
+                return 0;
+            }</code>
+    </pre>
+<br>
+<h2>Citações (quotation) simples</h2>
+<p>Disse Dom Pedro II <q>A política não é para mim senão o duro cumprimento do dever.</q></p>
+<h2>Citações completas</h2>
+<p>Disse Dom Pedro II:
+<blockquote>"Eu amo a Bíblia, eu leio-a todos os dias e, quanto mais a leio tanto mais a amo. Há alguns que não gostam da Bíblia. Eu não os entendo, não compreendo tais pessoas, mas, eu a amo, amo a sua simplicidade e amo as suas repetições e reiterações da verdade. Como disse, eu leio-a quotidianamente e gosto dela cada vez mais."
+
+</blockquote></p>
+<h2>Abreviações</h2>
+<p>Estamos estudando <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr></p>
+
+
+    
+</body>
+</html>
