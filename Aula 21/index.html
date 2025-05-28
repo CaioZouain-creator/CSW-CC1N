@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de idade</title>
+</head>
+<body>
+    <div>
+        <p>Qual seu dia de nascimento? 
+            <input type="number" name="" id="diadata" max="31">
+            <br>
+            Qual seu mês de nascimento?
+            <select name="" id="mesdata">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+            <br>
+            Qual seu ano de nascimento?
+            <input type="number" name="" id="anodata">
+            <button class="botao" onclick="calcularidade()">Calcula Idade</button>
+            <br>
+            <div id="resultado"></div>
+
+
+            
+        </p>
+    </div>
+    <Script>
+        function calcularidade() {
+            var hoje = new Date()
+            let dia = document.getElementById("diadata").value;
+            let mes = document.getElementById("mesdata").value;
+            let ano = document.getElementById("anodata").value;
+            var datanac = new Date(ano + "/" + mes + "/" + dia)
+            var idade = hoje.getFullYear() - datanac.getFullYear();
+            const elementoresultado = document.getElementById("resultado");
+            elementoresultado.innerHTML = idade;
+} 
+    </Script>
+</body>
+</html>
